@@ -35,3 +35,13 @@ jobs:
       - name: Build application
         run: yarn redwood build
 
+  deploy-qa:
+    name: Deploy to QA
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to QA environment
+        run: echo "Deployed to QA environment with AWS S3 bucket magic or Azure container magic"
+
