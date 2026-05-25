@@ -34,7 +34,7 @@ jobs:
       - name: Install retire.js
         run: npm install -g retire
       - name: Run retire.js
-        run: cd web; retire --path web
+        run: retire --path web
 
   build:
     name: Build Application
