@@ -25,7 +25,7 @@ jobs:
     name: SAST - Dependency Scan
     runs-on: ubuntu-latest
     container:
-      image: node:14-bullseye
+      image: node:18-bullseye
 
     steps:
       - uses: actions/checkout@v4
