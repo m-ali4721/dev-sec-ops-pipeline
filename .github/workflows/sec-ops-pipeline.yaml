@@ -21,3 +21,17 @@ jobs:
       - name: Run tests
         run: yarn redwood test
 
+  build:
+    name: Build Application
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    container:
+      image: node:14-bullseye
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: yarn
+      - name: Build application
+        run: yarn redwood build
+
